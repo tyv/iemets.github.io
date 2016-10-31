@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&amp;subset=cyrillic");
+@import url('./reset.css');
+@import url('./icons.css');
+
+
+/* Main styles START */
+    html, body {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    body {
+        font: 16px/1.5 "Noto Sans", Helvetica, Arial, sans;
+        color: #fff;
+        background: #000 url("../i/oleksandr-iemets.jpg") no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+    }
+
+    .main_index {
+        margin-top: 100px
+    }
+
+    .main_inner {
+        margin-top: 75px
+    }
+
+    /* Page title styles START */
+        .page-title {
+            font-size: 36px;
+            line-height: 1.5;
+
+            position: relative;
+
+            border-bottom: 2px solid rgba(255,255,255,0.48);
+        }
+
+        .page-title::after {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+
+            width: 100%;
+            height: 1px;
+
+            background: rgba(255,255,255,0.48);
+
+            content: "";
+        }
+    /* Page title styles END */
+
+    /* Static text styles START */
+        .static-text p {
+            margin: 20px 0;
+        }
+        .article-heading{
+            font-size: 22px;
+            text-decoration: underline;
+        }
+        .workshoplist{
+            list-style: none;;
+
+        }
+        .worshoplist_item:before {
+            content:  "\2014";
+        }
+        .equipmentlist li{
+            list-style-type: none;
+            counter-increment: step-counter;
+        }
+        .eqiupmentlist_item::before{
+            content: counter(step-counter);
+            position: absolute;
+            transform: translateX(-300%);
+        }
+    /* Static text styles END */
+
+    /* Layout styles START */
+        .layout {
+            padding: 20vh 50px 50px 54%;
+        }
+    /* Layout styles END */
+
+    /* Header styles START */
+        .logo {            
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1;
+
+
+            position: relative;
+            display: inline-block;
+
+            padding-top: 0.36em;
+            margin-left: -0.11em;
+        }
+
+        .logo__firstname {
+            position: absolute;
+            top: -0.34em;
+            right: 0;
+        }
+    /* Header styles END */
+
+    /* Menu styles START */
+        .menu__link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu_main .menu__list_secondary {
+            margin-top: 75px;
+        }
+
+        .menu_main .menu__link {
+            font-size: 24px;
+            line-height: 1.9;
+
+            padding-bottom: 3px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.48);
+
+            will-change: border-color;
+            -webkit-transition: border-color 0.3s ease-out;
+            -moz-transition: border-color 0.3s ease-out;
+            transition: border-color 0.3s ease-out;
+        }
+
+        .menu_main .menu__link:hover {
+            border-color: #fff;
+        }
+
+        .menu_main .menu__link .icon {
+            position: absolute;
+            width: 1.75em;
+
+            transform: translateX(-100%);
+        }
+    /* Menu styles END */
+/* Main styles END */
