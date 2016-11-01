@@ -63,6 +63,9 @@
         }
         .worshoplist_item::before {
             content:  "\2014";
+            position: absolute;
+            width: 30px;
+            transform: translateX(-100%);
         }
         .equipmentlist li{
             list-style-type: none;
@@ -99,6 +102,9 @@
             position: absolute;
             top: -0.34em;
             right: 0;
+        }
+        .logo__link{
+            color: inherit;
         }
     /* Header styles END */
 
