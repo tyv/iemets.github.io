@@ -58,7 +58,7 @@
             text-decoration: underline;
         }
         .workshoplist{
-            list-style: none;;
+            list-style: none;
 
         }
         .worshoplist_item::before {
