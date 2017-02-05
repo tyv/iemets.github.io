@@ -17,6 +17,10 @@
         background-attachment: fixed;
     }
 
+    :link {
+        color: inherit;
+    }
+
     :link:hover,
     :visited:hover {
         color: #00efff !important;
@@ -31,31 +35,48 @@
     }
 
     /* Static text styles START */
-        .static-text p {
-            margin: 20px 0;
+        .static-text {
+            margin-top: 20px
         }
-        .article-heading{
-            font-size: 22px;
-            text-decoration: underline;
-        }
-        .workshoplist{
-            list-style: none;
 
+        .static-text p {
+            margin: 1em 0;
         }
-        .worshoplist_item::before {
-            content:  "\2014";
+
+        .static-text h1,
+        .static-text h2,
+        .static-text h3,
+        .static-text h4,
+        .static-text h5 {
+            margin: 2em 0 1em
+        }
+
+         .static-text h1 {
+            font-size: 28px;
+        }
+
+        .static-text h2 {
+            font-size: 24px;
+        }
+
+        .static-text h3 {
+            font-size: 20px;
+        }
+
+        .static-text ul li::before {
+            content:  "\2014\00a0";
             position: absolute;
-            width: 30px;
             transform: translateX(-100%);
         }
-        .equipmentlist li{
-            list-style-type: none;
+
+        .static-text ol li {
             counter-increment: step-counter;
         }
-        .eqiupmentlist_item::before{
-            content: counter(step-counter);
+
+        .static-text ol li::before{
             position: absolute;
-            transform: translateX(-300%);
+            transform: translateX(calc(-100% - 10px));
+            content: counter(step-counter)".\00a0";
         }
     /* Static text styles END */
 
