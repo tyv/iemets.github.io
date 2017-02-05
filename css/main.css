@@ -12,9 +12,14 @@
     body {
         font: 16px/1.5 "Noto Sans", Helvetica, Arial, sans;
         color: #fff;
-        background: #000 url("../i/oleksandr-iemets.jpg") no-repeat;
+        background: #000 no-repeat url("../i/oleksandr-iemets.jpg");
         background-size: contain;
         background-attachment: fixed;
+    }
+
+    :link:hover,
+    :visited:hover {
+        color: #00efff !important;
     }
 
     .main_index {
@@ -24,30 +29,6 @@
     .main_inner {
         margin-top: 75px
     }
-
-    /* Page title styles START */
-        .page-title {
-            font-size: 36px;
-            line-height: 1.5;
-
-            position: relative;
-
-            border-bottom: 2px solid rgba(255,255,255,0.48);
-        }
-
-        .page-title::after {
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-
-            width: 100%;
-            height: 1px;
-
-            background: rgba(255,255,255,0.48);
-
-            content: "";
-        }
-    /* Page title styles END */
 
     /* Static text styles START */
         .static-text p {
@@ -80,7 +61,7 @@
 
     /* Layout styles START */
         .layout {
-            padding: 20vh 50px 50px 54%;
+            padding: 20vh 50px 50px 45%;
         }
     /* Layout styles END */
 
@@ -103,15 +84,68 @@
             top: -0.34em;
             right: 0;
         }
-        .logo__link{
+
+
+        .logo__lastname-fl {
+            position: relative;
+        }
+
+        .logo__link {
+            text-decoration: none;
+            text-shadow: 0 5px 0 #000, 1px 5px 0 #000,  -1px 5px 0 #000, 0 7px 0 #fff;
+        }
+
+        .logo__link:visited {
             color: inherit;
         }
+
+        .logo__link:hover {
+            text-shadow: 0 5px 0 #000, 1px 5px 0 #000,  -1px 5px 0 #000, 0 7px 0 #00efff;
+        }
     /* Header styles END */
+
+    /* Menu-container styles START */
+        .menu-container {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap-reverse;
+            position: relative;
+
+            border-bottom: 2px solid rgba(255,255,255,0.48);
+        }
+
+        .menu-container:after {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+
+            width: 100%;
+            height: 1px;
+
+            background: rgba(255,255,255,0.48);
+
+            content: "";
+        }
+    /* Menu-container styles END */
+
+    /* Page title styles START */
+        .page-title {
+            flex-grow: 1;
+            font-size: 36px;
+            line-height: 1.5;
+
+            margin-right: 35px;
+
+            white-space: nowrap;
+        }
+    /* Page title styles END */
+
 
     /* Menu styles START */
         .menu__link {
             color: #fff;
             text-decoration: none;
+            white-space: nowrap;
         }
 
         .menu_main .menu__list_secondary {
@@ -142,5 +176,38 @@
 
             transform: translateX(-100%);
         }
+
+        .menu_inner {
+            flex-shrink: 1;
+        }
+
+        .menu_inner .menu__list {
+            display: flex;
+        }
+
+        .menu_inner .menu__item {
+            font-size: 21px;
+            margin-right: 25px;
+        }
+
+        .menu_inner .menu__item:last-child {
+            margin-right: 0;
+        }
     /* Menu styles END */
+
+    /* Media queries SART */
+        @media (max-width: 1000px) {
+            body {
+                background-image: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 100%), url("../i/oleksandr-iemets.jpg");
+            }
+            .logo {
+                margin-left: 0;
+                padding-left: 1.63em;
+            }
+            .layout {
+                padding: 75px 50px 50px;
+            }
+        }
+    /* Media queries END */
 /* Main styles END */
+
