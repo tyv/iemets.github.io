@@ -34,6 +34,29 @@
         .static-text p {
             margin: 20px 0;
         }
+        .article-heading{
+            font-size: 22px;
+            text-decoration: underline;
+        }
+        .workshoplist{
+            list-style: none;
+
+        }
+        .worshoplist_item::before {
+            content:  "\2014";
+            position: absolute;
+            width: 30px;
+            transform: translateX(-100%);
+        }
+        .equipmentlist li{
+            list-style-type: none;
+            counter-increment: step-counter;
+        }
+        .eqiupmentlist_item::before{
+            content: counter(step-counter);
+            position: absolute;
+            transform: translateX(-300%);
+        }
     /* Static text styles END */
 
     /* Layout styles START */
@@ -48,6 +71,7 @@
             font-weight: bold;
             line-height: 1;
 
+
             position: relative;
             display: inline-block;
 
@@ -60,6 +84,7 @@
             top: -0.34em;
             right: 0;
         }
+
 
         .logo__lastname-fl {
             position: relative;
@@ -185,3 +210,4 @@
         }
     /* Media queries END */
 /* Main styles END */
+
