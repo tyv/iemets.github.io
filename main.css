@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&amp;subset=cyrillic");
+@import url('./reset.css');
+@import url('./icons.css');
+
+
+/* Main styles START */
+    html, body {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    body {
+        font: 16px/1.5 "Noto Sans", Helvetica, Arial, sans;
+        color: #fff;
+        background: #000 no-repeat url("../i/oleksandr-iemets.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+    }
+
+    :link {
+        color: inherit;
+    }
+
+    :link:hover,
+    :visited:hover {
+        color: #00efff !important;
+    }
+
+    .main_index {
+        margin-top: 100px
+    }
+
+    .main_inner {
+        margin-top: 75px
+    }
+
+    /* Static text styles START */
+        .static-text {
+            margin-top: 20px
+        }
+
+        .static-text p {
+            margin: 1em 0;
+        }
+
+        .static-text h1,
+        .static-text h2,
+        .static-text h3,
+        .static-text h4,
+        .static-text h5 {
+            margin: 2em 0 1em
+        }
+
+         .static-text h1 {
+            font-size: 28px;
+        }
+
+        .static-text h2 {
+            font-size: 24px;
+        }
+
+        .static-text h3 {
+            font-size: 20px;
+        }
+
+        .static-text ul li::before {
+            content:  "\2014\00a0";
+            position: absolute;
+            transform: translateX(-100%);
+        }
+
+        .static-text ol li {
+            counter-increment: step-counter;
+        }
+
+        .static-text ol li::before{
+            position: absolute;
+            transform: translateX(calc(-100% - 10px));
+            content: counter(step-counter)".\00a0";
+        }
+    /* Static text styles END */
+
+    /* Layout styles START */
+        .layout {
+            padding: 20vh 50px 50px 45%;
+        }
+    /* Layout styles END */
+
+    /* Header styles START */
+        .logo {
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1;
+
+
+            position: relative;
+            display: inline-block;
+
+            padding-top: 0.36em;
+            margin-left: -0.11em;
+        }
+
+        .logo__firstname {
+            position: absolute;
+            top: -0.34em;
+            right: 0;
+        }
+
+
+        .logo__lastname-fl {
+            position: relative;
+        }
+
+        .logo__link {
+            text-decoration: none;
+            text-shadow: 0 5px 0 #000, 1px 5px 0 #000,  -1px 5px 0 #000, 0 7px 0 #fff;
+        }
+
+        .logo__link:visited {
+            color: inherit;
+        }
+
+        .logo__link:hover {
+            text-shadow: 0 5px 0 #000, 1px 5px 0 #000,  -1px 5px 0 #000, 0 7px 0 #00efff;
+        }
+    /* Header styles END */
+
+    /* Menu-container styles START */
+        .menu-container {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap-reverse;
+            position: relative;
+
+            border-bottom: 2px solid rgba(255,255,255,0.48);
+        }
+
+        .menu-container:after {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+
+            width: 100%;
+            height: 1px;
+
+            background: rgba(255,255,255,0.48);
+
+            content: "";
+        }
+    /* Menu-container styles END */
+
+    /* Page title styles START */
+        .page-title {
+            flex-grow: 1;
+            font-size: 36px;
+            line-height: 1.5;
+
+            margin-right: 35px;
+
+            white-space: nowrap;
+        }
+    /* Page title styles END */
+
+
+    /* Menu styles START */
+        .menu__link {
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .menu_main .menu__list_secondary {
+            margin-top: 75px;
+        }
+
+        .menu_main .menu__link {
+            font-size: 24px;
+            line-height: 1.9;
+
+            padding-bottom: 3px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.48);
+
+            will-change: border-color;
+            -webkit-transition: border-color 0.3s ease-out;
+            -moz-transition: border-color 0.3s ease-out;
+            transition: border-color 0.3s ease-out;
+        }
+
+        .menu_main .menu__link:hover {
+            border-color: #fff;
+        }
+
+        .menu_main .menu__link .icon {
+            position: absolute;
+            width: 1.75em;
+
+            transform: translateX(-100%);
+        }
+
+        .menu_inner {
+            flex-shrink: 1;
+        }
+
+        .menu_inner .menu__list {
+            display: flex;
+        }
+
+        .menu_inner .menu__item {
+            font-size: 21px;
+            margin-right: 25px;
+        }
+
+        .menu_inner .menu__item:last-child {
+            margin-right: 0;
+        }
+    /* Menu styles END */
+
+    /* Media queries SART */
+        @media (max-width: 1000px) {
+            body {
+                background-image: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 100%), url("../i/oleksandr-iemets.jpg");
+            }
+            .logo {
+                margin-left: 0;
+                padding-left: 1.63em;
+            }
+            .layout {
+                padding: 75px 50px 50px;
+            }
+        }
+    /* Media queries END */
+/* Main styles END */
