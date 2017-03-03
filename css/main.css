@@ -216,7 +216,7 @@
         }
     /* Menu styles END */
 
-    /* Media queries SART */
+    /* Media queries START */
         @media (max-width: 1000px) {
             body {
                 background-image: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 100%), url("../i/oleksandr-iemets.jpg");
@@ -230,5 +230,24 @@
             }
         }
     /* Media queries END */
-/* Main styles END */
 
+    /*Media styles START*/
+        video{
+            width: 320px;
+            height: 180px;
+        }
+        .video h1{
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        _video[poster]{
+            width: 380px;
+            height: 272px;
+        }
+        video[poster]:hover{
+
+            }
+    /*Media styles END*/
+
+
+/* Main styles END */
