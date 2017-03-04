@@ -19,6 +19,8 @@
 
     :link {
         color: inherit;
+        will-change: color;
+        transition: 0.2s color ease-out;
     }
 
     :link:hover,
@@ -92,7 +94,6 @@
             font-weight: bold;
             line-height: 1;
 
-
             position: relative;
             display: inline-block;
 
@@ -106,13 +107,14 @@
             right: 0;
         }
 
-
         .logo__lastname-fl {
             position: relative;
         }
 
         .logo__link {
             text-decoration: none;
+            will-change: text-shadow;
+            transition: 0.2s text-shadow ease-out, 0.2s color ease-out;
             text-shadow: 0 5px 0 #000, 1px 5px 0 #000,  -1px 5px 0 #000, 0 7px 0 #fff;
         }
 
@@ -232,22 +234,80 @@
     /* Media queries END */
 
     /*Media styles START*/
-        video{
-            width: 320px;
-            height: 180px;
-        }
-        .video h1{
-            margin-top: 10px;
-            margin-bottom: 0px;
-        }
-        _video[poster]{
-            width: 380px;
-            height: 272px;
-        }
-        video[poster]:hover{
 
-            }
+        .music-and-video {
+            margin-top: 20px;
+        }
+
     /*Media styles END*/
+
+    /*Thumbnails styles START*/
+        .thumbnails__title {
+            font-size: 28px;
+            margin: 2em 0 1em;
+        }
+
+        .thumbnails__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnails__list::after {
+            content: '';
+            display: block;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 300px;
+
+        }
+
+        .thumbnails__item {
+            flex-grow: 1;
+            flex-shrink: 0;
+            height: 20vmax;
+
+            cursor: pointer;
+            will-change: transform;
+            transition: 0.3s transform ease-out;
+        }
+
+        .thumbnails__item:hover {
+            transform: scale(1.115);
+            z-index: 1;
+        }
+
+        .thumbnails__thumbnail {
+            width: 100%;
+            height: 100%;
+        }
+
+        .thumbnails_soundcloud .thumbnails__item {
+            position: relative;
+        }
+
+        .thumbnails_soundcloud .thumbnails__item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+
+            height: 4px;
+
+            background: #000;
+        }
+
+        .thumbnails_soundcloud .thumbnails__item:hover::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            box-shadow: inset 0 0 4px 2px #000;
+        }
+
+    /*Thumbnails styles END*/
 
 
 /* Main styles END */
